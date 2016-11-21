@@ -5,10 +5,10 @@ import {
     Dimensions,
     StyleSheet,
     View,
-    ScrollView,
     Text,
     TouchableWithoutFeedback
 } from "react-native";
+const InvertibleScrollView = require('react-native-invertible-scroll-view');
 
 import styles from "./styles";
 
@@ -160,7 +160,7 @@ export default class Carousel extends Component {
 
         return (
             <View style={ styles.container }>
-                <ScrollView
+                <InvertibleScrollView
                     automaticallyAdjustContentInsets={ false }
                     bounces
                     contentContainerStyle={ [ computedStyles.scrollView ] }
@@ -171,7 +171,7 @@ export default class Carousel extends Component {
                     showsHorizontalScrollIndicator={ false }
                 >
                     { body }
-                </ScrollView>
+                </InvertibleScrollView>
             </View>
         );
     }
